@@ -46,16 +46,22 @@ import { count, decimalChecker } from '../common/count';
           [innerHTML]="formattedLabel">
         </xhtml:p>
       </svg:foreignObject>
-      <svg:text #textEl
+      <svg:foreignObject #textEl
         class="value-text"
         [attr.x]="textPadding[3]"
-        [attr.y]="textPadding[0]"
+        [attr.y]="textPadding[0] - 10"
+        [attr.width]="200"
+        [attr.height]="40"
         [style.fill]="textColor"
         text-anchor="start"
         alignment-baseline="hanging"
-        [innerHTML]="value | keepHtml"
-        [style.font-size.pt]="textFontSize">
-      </svg:text>
+        [style.font-size.pt]="textFontSize * 2">
+        <xhtml:p
+          [style.color]="textColor"
+          [style.fontSize.pt]="textFontSize * 2"
+          [innerHTML]="value | keepHtml">
+        </xhtml:p>
+      </svg:foreignObject>
     </svg:g>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
