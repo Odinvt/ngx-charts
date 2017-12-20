@@ -3,6 +3,8 @@ import { ChartCommonModule } from '../common/chart-common.module';
 import { CardComponent } from './card.component';
 import { CardSeriesComponent } from './card-series.component';
 import { NumberCardComponent } from './number-card.component';
+import { EscapeHtmlPipe } from './keep-html.pipe';
+
 
 export { CardComponent, CardSeriesComponent, NumberCardComponent };
 
@@ -11,7 +13,8 @@ export { CardComponent, CardSeriesComponent, NumberCardComponent };
   declarations: [
     CardComponent,
     CardSeriesComponent,
-    NumberCardComponent
+    NumberCardComponent,
+    EscapeHtmlPipe
   ],
   exports: [
     CardComponent,

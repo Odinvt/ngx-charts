@@ -54,7 +54,7 @@ import { count, decimalChecker } from '../common/count';
         text-anchor="start"
         alignment-baseline="hanging"
         [style.font-size.pt]="textFontSize">
-        {{value}}
+        {{value | keepHtml}}
       </svg:text>
     </svg:g>
   `,
