@@ -53,8 +53,8 @@ import { count, decimalChecker } from '../common/count';
         [style.fill]="textColor"
         text-anchor="start"
         alignment-baseline="hanging"
+        [innerHTML]="value | keepHtml"
         [style.font-size.pt]="textFontSize">
-        {{value | keepHtml}}
       </svg:text>
     </svg:g>
   `,
